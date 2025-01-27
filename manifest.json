@@ -6,9 +6,6 @@
   "icons": {
     "128": "128.png"
   },
-  "background": {
-    "service_worker": "bg.js"
-  },
   "commands": {
     "0": {
       "suggested_key": {
@@ -22,5 +19,8 @@
       },
       "description": "Closed tabs"
     }
+  },
+  "background": {
+    "service_worker": "bg.js"
   }
 }
