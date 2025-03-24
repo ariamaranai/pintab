@@ -6,11 +6,9 @@ chrome.commands.onCommand.addListener(command =>
       let { id, pinned } = tab;
       command == "1"
         ? pinned
-          ? chrome.tabs.query({ currentWindow: !0 }, t =>
-              t.length == tabLen && chrome.windows.remove(tab.windowId).catch(() => 0)
-            )
+          ? chrome.tabs.query({ currentWindow: !0 }, t => t.length == tabLen && chrome.windows.remove(tab.windowId).catch(() => 0))
           : chrome.tabs.remove(id).catch(() => 0)
         : chrome.tabs.update(id, { pinned: !pinned });
     }
-  })  
+  })
 );
