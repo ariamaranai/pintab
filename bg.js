@@ -15,8 +15,7 @@ chrome.commands.onCommand.addListener(command =>
     } else
       chrome.windows.getLastFocused({
         windowTypes: ["devtools"]
-      }, window =>
-        window && chrome.windows.update(window.id, {
+      }, window => chrome.windows.update(window.id, {
           state: "minimized"
         })
       );
