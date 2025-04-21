@@ -7,12 +7,15 @@ chrome.commands.onCommand.addListener(command =>
       command == "1"
         ? pinned
           ? chrome.tabs.query({ currentWindow: !0 }, t =>
-              t.length == tabLen && chrome.windows.remove(tab.windowId).catch(() => 0)
+              t.length == tabLen &&
+              chrome.windows.remove(tab.windowId).catch(() => 0)
             )
           : chrome.tabs.remove(id).catch(() => 0)
         : chrome.tabs.update(id, { pinned: !pinned });
     } else
-      chrome.windows.getLastFocused({ windowTypes: ["devtools"] }, window =>
+      chrome.windows.getLastFocused({
+        windowTypes: ["devtools"]
+      }, window =>
         window && chrome.windows.update(window.id, {
           state: "minimized"
         })
