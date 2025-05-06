@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "pintab",
   "version": "0",
-  "description": "Pin/unpin tabs(Ctrl+Q),disable closing pinned tabs(Ctrl+W)",
+  "description": "Ctrl+Q: Pin tabs | Ctrl+W: Disable closing pinned tabs",
   "icons": {
     "128": "128.png"
   },
