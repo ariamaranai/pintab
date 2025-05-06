@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "pintab",
   "version": "0",
-  "description": "Ctrl+Q: Pin tabs | Ctrl+W: Disable closing pinned tabs",
+  "description": "Pin/Unpin tab | Ctrl+W: Prevent closing of pinned tabs",
   "icons": {
     "128": "128.png"
   },
@@ -11,13 +11,13 @@
       "suggested_key": {
         "default": "Ctrl+Q"
       },
-      "description": "Pinned tabs"
+      "description": "Pin tab"
     },
     "1": {
       "suggested_key": {
         "default": "Ctrl+W"
       },
-      "description": "Closed tabs"
+      "description": "Close tab"
     }
   },
   "background": {
