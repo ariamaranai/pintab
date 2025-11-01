@@ -1,9 +1,7 @@
 chrome.commands.onCommand.addListener(command =>
   chrome.tabs.query({ active: !0, currentWindow: !0 }, tabs => {
     if (tabs.length) {
-      let tab = tabs[0];
-      let id = tab.id;
-      let pinned = tab.pinned;
+      let { id, pinned } = tabs[0];
       command == "1"
         ? pinned
           ? chrome.tabs.query({ currentWindow: !0 }, t => {
