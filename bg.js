@@ -12,7 +12,7 @@ chrome.commands.onCommand.addListener(command =>
                   : chrome.tabs.onActivated.addListener(onTabActivated);
               }
             })
-          : chrome.tabs.remove(id).catch(() => 0)
+          : chrome.tabs.remove(id).catch(Function.prototype)
         : chrome.tabs.update(id, { pinned: !pinned });
     }
   })
